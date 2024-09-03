@@ -32,6 +32,12 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    ### 3rd-party apps
+    'adminlte3',
+    'adminlte3_theme',
+
+
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -57,6 +63,7 @@ INSTALLED_APPS = [
 
     ### custom
     'home',
+
 
 
 ]
@@ -190,3 +197,5 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get('ADMIN_EMAIL_UN') # var for email username
 EMAIL_HOST_PASSWORD = os.environ.get('ADMIN_EMAIL_PW') # var for email pw
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER # for email-sending pw-reset requests
+AUTH_USER_MODEL='auth.User'
+# AUTH_USER_MODEL='users.User'   # create a custom user model first
