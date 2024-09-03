@@ -1,7 +1,27 @@
 {% extends 'index.html' %}
-{# load static %}
+{% load static %}
 
 
 {% block content %}
 <h2>home.html</h2>
+current logged-in user: <b>{{request.user.username}}</b>
+<hr>
+test links <br>
+
+<ul>
+	<li><a href="{% url 'account_login' %}">account_login</a></li>
+	<li><a href="{% url 'account_logout' %}">account_logout</a></li>
+	<li><a href="{% url 'account_signup' %}">account_signup</a></li>
+	<li><a href="{% url 'account_change_password' %}">account_change_password</a></li>
+</ul>
+
+<hr>
+
+***check to see how to modify go-to urls after successfully changing passwords and the likes <br>
+***set the 'extends' tags to actually extend 'home/base.html' for uniformity <br>
+***modify header and footer <br>
+***modify links <br>
+
+
+
 {% endblock content %}
