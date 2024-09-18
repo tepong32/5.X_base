@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'adminlte3_theme',
 
 
-
+    'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -181,6 +181,12 @@ SOCIALACCOUNT_PROVIDERS = {
         }
     }
 }
+
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_USERNAME_REQUIRED = False
+
 
 LOGIN_REDIRECT_URL = 'home'     # needed for the login.html success instance
 LOGIN_URL = 'login'             # for the @login_required decorator on user.views.profile
