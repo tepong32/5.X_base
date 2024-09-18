@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+{% load static %}
+
+
+{% block content %}
+<h2>Profile Page</h2>
+
+<a href="{% url 'profile-edit' request.user %}">{{request.user.username}} (edit)</a>
+
+
+{% endblock content %}

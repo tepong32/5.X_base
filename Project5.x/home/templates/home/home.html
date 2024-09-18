@@ -13,6 +13,9 @@ test links <br>
 	<li><a href="{% url 'account_logout' %}">account_logout</a></li>
 	<li><a href="{% url 'account_signup' %}">account_signup</a></li>
 	<li><a href="{% url 'account_change_password' %}">account_change_password</a></li>
+	<hr>
+	<li><a href="{% url 'profile' request.user %}">profile</a></li>
+	<li><a href="{% url 'profile-edit' request.user %}">profile_edit</a></li>
 </ul>
 
 <hr>

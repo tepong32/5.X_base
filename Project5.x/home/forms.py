@@ -1,5 +1,5 @@
 from django import forms
-from .models import User
+from django.contrib.auth.models import User
 
 from django.contrib.auth.forms import UserCreationForm
 
@@ -17,7 +17,7 @@ class UserRegisterForm(UserCreationForm):
 
 	class Meta:
 		model = User 	# the mode that is going to be affected is the User model
-		fields = ["__all__"]
+		fields = "__all__"
 
 
 class UserUpdateForm(forms.ModelForm):
@@ -26,6 +26,6 @@ class UserUpdateForm(forms.ModelForm):
 	class Meta:
 		model = User 	# the model that is going to be affected is the User model, 
 		# fields = ["email", "first_name", "middle_name", "last_name"]
-		fields = ["__all__"]
+		# fields = ["__all__"]
 		exclude = ["username"]
 

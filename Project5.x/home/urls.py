@@ -1,9 +1,9 @@
 
 from django.urls import path, include
-from .views import homeView
+from .views import homeView, profile, profile_edit
 
 urlpatterns = [
     path('', homeView, name="home"),
-    path('<username>/', views.profile, name='profile' ),
-    path('<username>/edit/', views.profile_edit, name='profile-edit' ),
+    path('<username>/', profile, name='profile' ),
+    path('<username>/edit/', profile_edit, name='profile-edit' ),
 ]
